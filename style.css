@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #000;
+}
+body {
+  /*font-family: 'Parisienne', cursive;*/
+  /*font-family: 'Public Sans', sans-serif;*/
+  color: #d90000;
+  font-family: "Dancing Script", cursive;
+}
+
+.container {
+  width: 100%;
+}
+
+.section {
+  background: #f1f1f1;
+  background: #000000;
+  flex-direction: column;
+}
+.section > h1 {
+  font-weight: 600;
+  font-size: 140px;
+  margin-top: 10px;
+  animation: textFadIn 5s linear;
+  text-align: center;
+}
+.section > h1 > span {
+  font-size: 65px;
+  display: block;
+  margin: 60px 0;
+}
+.section > h1 > img {
+  border-radius: 50%;
+}
+.section > h3 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.final_text {
+  font-size: 55px;
+  color: white;
+  text-align: center;
+}
+.final_text div.hbd_last_text {
+  color: #48f1e9;
+  font-size: 110px;
+}
+
+.final_text div.ilu_text {
+  color: #dcff19;
+  font-size: 180px;
+}
+@keyframes textFadIn {
+  0% {
+    transform: scale(0.25);
+  }
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.section .box-wrapper {
+  /* width: 750px;
+  height: 750px; */
+  /*	position: absolute;
+	top: 30%;
+	left:  50%;
+	transform: translate(-50%,-30%);*/
+  position: relative;
+  pointer-events: none;
+  animation: textFadIn 10s linear;
+}
+/*.section .box-wrapper::before{
+	content: "";
+	top: 0;
+	left:  50%;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right,#000, transparent);
+	opacity:  0.1;
+	transform:  rotate(45deg);
+	transform-origin: left;
+}*/
+.section .box-wrapper .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #ff2a2a;
+  background: linear-gradient(135deg, #000, #727272);
+  background: transparent;
+  box-shadow: 2px 13px 20px 0px #871616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* -------gift box css---------- */
+.section .box-wrapper .box .gift-box {
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section .box-wrapper .box .gift-box img {
+  width: 70%;
+  cursor: pointer;
+  opacity: 1;
+  transition: visibility 1s, opacity 1s linear;
+}
+.section .box-wrapper .box .gift-box .gift-box-img-gif {
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: visibility 1s, opacity 1s linear;
+}
+
+.section .box-wrapper .box .gift-box .frame-box {
+  width: 100%;
+  height: 380px;
+  margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.section .box-wrapper .box .gift-box .frame-box.zoomIn {
+  animation: zoomIn 1.5s forwards;
+}
+
+.section .box-wrapper .box .gift-box .frame-box .bookWrapper {
+  width: 100%;
+  height: 380px;
+  box-shadow: 1px 17px 12px 11px #7c7c7cd1;
+  border: 2px solid #ff2a2a;
+}
+.section .box-wrapper .box .gift-box .frame-box .bookWrapper .bookFront {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFoldRight,
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFoldLeft {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: #dddddd;
+  border-bottom-style: solid;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFoldRight {
+  border-left-width: 1px;
+  border-left-color: #dddddd;
+  border-left-style: solid;
+  box-shadow: -5px 5px 10px #dddddd;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFoldLeft {
+  border-right-width: 1px;
+  border-right-color: #dddddd;
+  border-right-style: solid;
+  box-shadow: 5px 5px 10px #dddddd;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper {
+  position: relative;
+  width: 50%;
+  height: 380px;
+}
+.pageWrapper {
+  width: 100% !important;
+}
+
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace.back {
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 92%,
+    #f9f9f9 97%,
+    #d9d9d9 100%
+  );
+  pointer-events: none;
+  height: 380px;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace.front.has_image {
+  padding: 10px;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace.front {
+  background: linear-gradient(
+    to right,
+    #d9d9d9 0%,
+    #f9f9f9 3%,
+    #ffffff 8%,
+    #ffffff 100%
+  );
+  height: 380px;
+}
+
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace
+  > p {
+  font-size: 28px;
+  padding: 25px 15px 15px 15px;
+  text-align: left;
+}
+.bday_p {
+  font-size: 48px !important;
+  font-weight: 900;
+  text-align: center !important;
+  color: #6c0101;
+  padding-top: 43px !important;
+}
+.section
+  .box-wrapper
+  .box
+  .gift-box
+  .frame-box
+  .bookWrapper
+  .bookFront
+  .pageBg
+  .pageWrapper
+  .pageFace
+  img {
+  width: 100%;
+  min-height: 380px;
+}
+/* -------end gift box css---------- */
+
+.section .box-wrapper .box::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: linear-gradient(315deg, #140101, #000000);
+  background: transparent;
+  border-radius: 50%;
+}
+
+.section i {
+  background: #ff2a2a;
+  position: absolute;
+  border-radius: 100%;
+  animation: animate linear infinite;
+}
+.section i:nth-child(even) {
+  background: transparent;
+  border: 1px solid #ff2a2a;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-3000%);
+    opacity: 0;
+  }
+}
+
+/* ######## On BG Change ######## */
+
+.container.red-bg .section {
+  background: #950d0de8;
+  transition: background 5s;
+}
+.container.red-bg .section i {
+  background: yellow;
+}
+.container.red-bg .section .box-wrapper .box {
+  /*background: linear-gradient(135deg, #9f2323, #9f2323);*/
+}
+.container.red-bg .section .box-wrapper .box::before {
+  /*background:  linear-gradient(315deg, #912323, #931313);*/
+
+  transition: background 5s;
+}
+#player {
+  visibility: hidden;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0, 0) rotate(0deg);
+    /*transform:  rotate(0deg);*/
+  }
+  10% {
+    transform: scale(0.1, 0.1) rotate(-2deg);
+    /*transform:  rotate(-2deg);*/
+  }
+  20% {
+    transform: scale(0.2, 0.2) rotate(-4deg);
+    /*transform:  rotate(-4deg);*/
+  }
+  30% {
+    transform: scale(0.3, 0.3) rotate(-6deg);
+    /*transform:  rotate(-6deg);*/
+  }
+  40% {
+    transform: scale(0.4, 0.4) rotate(-8deg);
+    /*transform:  rotate(-8deg);*/
+  }
+  50% {
+    transform: scale(0.5, 0.5) rotate(-10deg);
+    /*transform:  rotate(-10deg);*/
+  }
+  60% {
+    transform: scale(0.6, 0.6) rotate(-12deg);
+    /*transform:  rotate(-12deg);*/
+  }
+  70% {
+    transform: scale(0.7, 0.7) rotate(-14deg);
+    /*transform:  rotate(-14deg);*/
+  }
+  80% {
+    transform: scale(0.8, 0.8) rotate(-16deg);
+    /*transform:  rotate(-16deg);*/
+  }
+  90% {
+    transform: scale(0.9, 0.9) rotate(-18deg);
+    /*transform:  rotate(-18deg);
+*/
+  }
+  100% {
+    transform: scale(1, 1) rotate(-20deg);
+    /*transform:  rotate(-20deg);*/
+  }
+}
