@@ -37,7 +37,7 @@ $(".page").click(function () {
     pageLocation[this.id] = "right";
   }
 
-  if (this.id === "page24") {
+  if (this.id === "page17") {
     document.getElementById("player").src = "music/hbd.mp3";
   }
   if (this.id === "page28") {
